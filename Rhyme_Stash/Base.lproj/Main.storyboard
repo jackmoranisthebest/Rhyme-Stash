@@ -21,29 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rhyme Stash" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5h-sq-0bi">
-                                <rect key="frame" x="121" y="20" width="132" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8e-dZ-Mzr">
-                                <rect key="frame" x="148" y="222" width="88" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Find Rhymes"/>
-                                <connections>
-                                    <segue destination="UcM-Il-jGe" kind="show" id="QUp-Ho-bnT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPB-b4-a0v">
-                                <rect key="frame" x="148" y="563" width="79" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Select Beat"/>
-                                <connections>
-                                    <segue destination="iPJ-hV-0Gm" kind="show" id="6pW-JA-dBO"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lTE-za-uEE">
                                 <rect key="frame" x="139" y="184" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -51,6 +28,29 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rhyme Stash" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5h-sq-0bi">
+                                <rect key="frame" x="121" y="50" width="132" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8e-dZ-Mzr">
+                                <rect key="frame" x="143" y="222" width="88" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Find Rhymes"/>
+                                <connections>
+                                    <segue destination="UcM-Il-jGe" kind="show" id="QUp-Ho-bnT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPB-b4-a0v">
+                                <rect key="frame" x="148" y="566" width="79" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Select Beat"/>
+                                <connections>
+                                    <segue destination="iPJ-hV-0Gm" kind="show" id="6pW-JA-dBO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -59,10 +59,10 @@
             </objects>
             <point key="canvasLocation" x="104.8" y="131.78410794602701"/>
         </scene>
-        <!--View Controller-->
+        <!--Beat View Controller-->
         <scene sceneID="lFK-vN-kty">
             <objects>
-                <viewController id="iPJ-hV-0Gm" sceneMemberID="viewController">
+                <viewController id="iPJ-hV-0Gm" customClass="BeatViewController" customModule="Rhyme_Stash" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sfR-h4-4Cj"/>
                         <viewControllerLayoutGuide type="bottom" id="oKC-KO-Yri"/>
@@ -77,10 +77,10 @@
             </objects>
             <point key="canvasLocation" x="884" y="459"/>
         </scene>
-        <!--View Controller-->
+        <!--Rhyme View Controller-->
         <scene sceneID="Nma-IQ-uIE">
             <objects>
-                <viewController id="UcM-Il-jGe" sceneMemberID="viewController">
+                <viewController id="UcM-Il-jGe" customClass="RhymeViewController" customModule="Rhyme_Stash" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="owv-eg-Iq5"/>
                         <viewControllerLayoutGuide type="bottom" id="gcL-hZ-hEg"/>
@@ -93,26 +93,41 @@
                                 <rect key="frame" x="164" y="173" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="rhyme0:" destination="UcM-Il-jGe" eventType="touchUpInside" id="IEb-3O-jOy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKd-T9-SuG">
                                 <rect key="frame" x="164" y="240" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="rhyme1:" destination="UcM-Il-jGe" eventType="touchUpInside" id="Po5-4I-BTT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hcz-Jt-Us1">
                                 <rect key="frame" x="164" y="301" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="rhyme2:" destination="UcM-Il-jGe" eventType="touchUpInside" id="jWk-oR-XB2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zen-gs-IKN">
                                 <rect key="frame" x="164" y="364" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="rhyme3:" destination="UcM-Il-jGe" eventType="touchUpInside" id="09z-MK-Hhp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuR-Ty-Vqy">
                                 <rect key="frame" x="164" y="426" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="rhyme4:" destination="UcM-Il-jGe" eventType="touchUpInside" id="z2m-uh-qJu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ImV-Kr-BVg">
                                 <rect key="frame" x="148" y="549" width="79" height="30"/>
@@ -126,11 +141,17 @@
                                 <rect key="frame" x="306" y="78" width="61" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Syllables"/>
+                                <connections>
+                                    <action selector="changeNumSyllables:" destination="UcM-Il-jGe" eventType="touchUpInside" id="ibU-Ur-juW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2e-Lu-x7y">
                                 <rect key="frame" x="13" y="78" width="53" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Refresh"/>
+                                <connections>
+                                    <action selector="refreshSuggestions:" destination="UcM-Il-jGe" eventType="touchUpInside" id="MlV-0C-RMS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
