@@ -18,29 +18,16 @@ class ViewController: UIViewController
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        let urlString = "http://rhymebrain.com/talk?function=getRhymes&word=hello"
-        
-        
-        
-        if let url = NSURL(string: urlString)
-        {
-            if let myData = try? NSData(contentsOf: url as URL, options: [])//try cheks for url connection
-            {
-                let json = JSON(data: myData as Data)
-                print(json[0]["word"].stringValue)
-                parse(json: json)//function that lets me use the json data
-            }
-        }
     }
     
-    func parse(json: JSON)
-    {
-        let word1 = json[0]["word"].stringValue
-        print(json["word"].stringValue)
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let svc = segue.destination as! RhymeViewController
+        svc.rhymeWord = self.startingWord
     }
+    
+    
     @IBAction func findRhymez(_ sender: UIButton) {
+        startingWord = startingWordText.text!
     }
     
 }

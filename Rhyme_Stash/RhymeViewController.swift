@@ -9,6 +9,20 @@
 import UIKit
 
 class RhymeViewController: UIViewController {
+    
+    var rhymeWord = ""
+    var count = 5
+    var a = 0
+    var b = 1
+    var c = 2
+    var d = 3
+    var e = 4
+    
+    var word1 = ""
+    var word2 = ""
+    var word3 = ""
+    var word4 = ""
+    var word5 = ""
    
     
     @IBOutlet weak var RhymeZero: UIButton!
@@ -23,10 +37,11 @@ class RhymeViewController: UIViewController {
     {
         super.viewDidLoad()
         
-        
+        navigationItem.title = rhymeWord
+
         // Do any additional setup after loading the view, typically from a nib.
         
-        let urlString = "http://rhymebrain.com/talk?function=getRhymes&word=beat"
+        let urlString = "http://rhymebrain.com/talk?function=getRhymes&word=\(rhymeWord)"
         //"https://api.datamuse.com/words?rel_rhy=beat"
         
         if let url = NSURL(string: urlString)
@@ -39,7 +54,7 @@ class RhymeViewController: UIViewController {
             }
         }
         
-        let urlString1 = "https://api.datamuse.com/words?rel_trg=dad"
+        let urlString1 = "https://api.datamuse.com/words?rel_trg=\(rhymeWord)"
         //"https://api.datamuse.com/words?rel_rhy=beat"
         
         if let url1 = NSURL(string: urlString1)
@@ -55,11 +70,11 @@ class RhymeViewController: UIViewController {
     
     func parse(json: JSON)
     {
-        let word1 = json[0]["word"].stringValue
-        let word2 = json[1]["word"].stringValue
-        let word3 = json[2]["word"].stringValue
-        let word4 = json[3]["word"].stringValue
-        let word5 = json[4]["word"].stringValue
+        word1 = json[a]["word"].stringValue
+        word2 = json[b]["word"].stringValue
+        word3 = json[c]["word"].stringValue
+        word4 = json[d]["word"].stringValue
+        word5 = json[e]["word"].stringValue
 
         RhymeZero.setTitle(word1, for: .normal)
         RhymeOne.setTitle(word2, for: .normal)
@@ -68,12 +83,8 @@ class RhymeViewController: UIViewController {
         RhymeFour.setTitle(word5, for: .normal)
     }
     
-    
-    
-    
     func associate(json1: JSON)
     {
-        
         let word0 = json1[0]["word"].stringValue
         RhymeFour.setTitle(word0, for: .normal)
         print(json1[0]["word"].stringValue)
@@ -81,7 +92,6 @@ class RhymeViewController: UIViewController {
     
 
     @IBAction func rhyme0(_ sender: UIButton) {
-        
     }
     
     @IBAction func rhyme1(_ sender: UIButton) {
@@ -98,8 +108,29 @@ class RhymeViewController: UIViewController {
     
     
     @IBAction func refreshSuggestions(_ sender: UIButton) {
+        a = a + count
+        b = b + count
+        c = c + count
+        d = d + count
+        e = e + count
+        
+        func parse(json: JSON)
+        {
+            word1 = json[a]["word"].stringValue
+            word2 = json[b]["word"].stringValue
+            word3 = json[c]["word"].stringValue
+            word4 = json[d]["word"].stringValue
+            word5 = json[e]["word"].stringValue
+            
+            RhymeZero.setTitle(word1, for: .normal)
+            RhymeOne.setTitle(word2, for: .normal)
+            RhymeTwo.setTitle(word3, for: .normal)
+            RhymeThree.setTitle(word4, for: .normal)
+            RhymeFour.setTitle(word5, for: .normal)
+        }
+        viewDidLoad()
     }
-    
+
     @IBAction func changeNumSyllables(_ sender: UIButton) {
     }
     
