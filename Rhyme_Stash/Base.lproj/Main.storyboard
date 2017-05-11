@@ -161,7 +161,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="rhyme0" destination="s9g-4T-zIY" id="OKr-iL-6UE"/>
+                        <outlet property="RhymeFour" destination="YuR-Ty-Vqy" id="jJ8-LJ-KzX"/>
+                        <outlet property="RhymeOne" destination="sKd-T9-SuG" id="Gtt-dY-kX8"/>
+                        <outlet property="RhymeThree" destination="zen-gs-IKN" id="XSv-pe-Pq4"/>
+                        <outlet property="RhymeTwo" destination="Hcz-Jt-Us1" id="ARq-Mj-aNb"/>
+                        <outlet property="RhymeZero" destination="s9g-4T-zIY" id="hcS-sV-vWk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mdz-kY-aeZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
