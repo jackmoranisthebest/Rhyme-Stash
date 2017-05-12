@@ -22,13 +22,13 @@ class ViewController: UIViewController
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier == "rhymeSegue1"{
         let svc = segue.destination as! RhymeViewController
         if segue.identifier == "rhymeSegue1"{
         svc.rhymeWord = self.startingWord
+            }
         }
     }
-    
     
     @IBAction func findRhymez(_ sender: UIButton) {
         startingWord = startingWordText.text!

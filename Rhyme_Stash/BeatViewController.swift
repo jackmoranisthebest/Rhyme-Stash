@@ -16,7 +16,7 @@ class BeatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let path = Bundle.main.path(forResource: "wu-tang", ofType: "mp3")!
+        let path = Bundle.main.path(forResource: "wu-tang.mp3", ofType: nil)!
         let url = URL(fileURLWithPath: path)
         
         do {

@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class RhymeViewController: UIViewController {
     
+    var player: AVAudioPlayer!
     var rhymeWord = ""
     var count = 5
     var a = 0
@@ -31,9 +33,6 @@ class RhymeViewController: UIViewController {
     @IBOutlet weak var RhymeThree: UIButton!
     @IBOutlet weak var RhymeFour: UIButton!
     
-    var rhymeWord = ""
-    
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -42,7 +41,7 @@ class RhymeViewController: UIViewController {
 
         // Do any additional setup after loading the view, typically from a nib.
         
-        let urlString = "http://rhymebrain.com/talk?function=getRhymes&word=\(rhymeWord)"
+        let urlString = "https://api.datamuse.com/words?rel_rhy=\(rhymeWord)"
         //"https://api.datamuse.com/words?rel_rhy=beat"
         
         if let url = NSURL(string: urlString)
@@ -67,8 +66,21 @@ class RhymeViewController: UIViewController {
                 associate(json1: json1)//function that lets me use the json data
             }
         }
+      
+        //AUDIO PLAYER
+        
+        let path = Bundle.main.path(forResource: "wu-tang.mp3", ofType: nil)!
+        let url = URL(fileURLWithPath: path)
+        
+        do {
+            let sound = try AVAudioPlayer(contentsOf: url)
+            player = sound
+        } catch {
+            // couldn't load file :(
+        }
+        
     }
-    
+ 
     func parse(json: JSON)
     {
         word1 = json[a]["word"].stringValue
@@ -87,8 +99,8 @@ class RhymeViewController: UIViewController {
     
     func associate(json1: JSON)
     {
-        let word0 = json1[0]["word"].stringValue
-        RhymeFour.setTitle(word0, for: .normal)
+      //  let word0 = json1[0]["word"].stringValue
+      //  RhymeFour.setTitle(word0, for: .normal)
         print(json1[0]["word"].stringValue)
     }
     
@@ -107,6 +119,20 @@ class RhymeViewController: UIViewController {
     
     @IBAction func rhyme4(_ sender: UIButton) {
     }
+    
+    @IBAction func playBeat(_ sender: UIButton) {
+        
+        player.play()
+        
+    }
+    
+    @IBAction func stopBeat(_ sender: UIButton) {
+        if player != nil {
+            player.stop()
+        }
+    }
+    
+    
     
     
     @IBAction func refreshSuggestions(_ sender: UIButton) {
@@ -137,14 +163,6 @@ class RhymeViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
 
 }
