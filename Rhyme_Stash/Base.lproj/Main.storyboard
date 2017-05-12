@@ -41,7 +41,7 @@
                                 <state key="normal" title="Find Rhymes"/>
                                 <connections>
                                     <action selector="findRhymez:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eAU-ci-ugh"/>
-                                    <segue destination="UcM-Il-jGe" kind="show" id="QUp-Ho-bnT"/>
+                                    <segue destination="UcM-Il-jGe" kind="show" identifier="rhymeSegue1" id="QUp-Ho-bnT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPB-b4-a0v">
@@ -49,7 +49,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Select Beat"/>
                                 <connections>
-                                    <segue destination="iPJ-hV-0Gm" kind="show" id="6pW-JA-dBO"/>
+                                    <segue destination="iPJ-hV-0Gm" kind="show" identifier="beatSegue" id="6pW-JA-dBO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -74,6 +74,24 @@
                     <view key="view" contentMode="scaleToFill" id="qUP-Lc-oSx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSM-EW-u9n">
+                                <rect key="frame" x="156" y="235" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playSound:" destination="iPJ-hV-0Gm" eventType="touchUpInside" id="XsJ-65-F9W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ri-U9-R5v">
+                                <rect key="frame" x="165" y="367" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stopSound:" destination="iPJ-hV-0Gm" eventType="touchUpInside" id="nSV-6d-YCb"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -138,7 +156,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Select Beat"/>
                                 <connections>
-                                    <segue destination="iPJ-hV-0Gm" kind="show" id="Mbe-Fw-CUn"/>
+                                    <segue destination="iPJ-hV-0Gm" kind="show" identifier="beatSegue1" id="Mbe-Fw-CUn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrD-8C-XBE">

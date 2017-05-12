@@ -19,6 +19,8 @@
 		3F9F26C01EAE5C9D009EA9AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9F26BE1EAE5C9D009EA9AF /* LaunchScreen.storyboard */; };
 		3F9F26CB1EAE5C9E009EA9AF /* Rhyme_StashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9F26CA1EAE5C9E009EA9AF /* Rhyme_StashTests.swift */; };
 		3F9F26D61EAE5C9E009EA9AF /* Rhyme_StashUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9F26D51EAE5C9E009EA9AF /* Rhyme_StashUITests.swift */; };
+		3FB2F2DC1EC4C7AC0080798D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB2F2DB1EC4C7AC0080798D /* AVFoundation.framework */; };
+		3FB2F2DE1EC4C7B00080798D /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB2F2DD1EC4C7B00080798D /* AVKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		3F9F26D11EAE5C9E009EA9AF /* Rhyme_StashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Rhyme_StashUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9F26D51EAE5C9E009EA9AF /* Rhyme_StashUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rhyme_StashUITests.swift; sourceTree = "<group>"; };
 		3F9F26D71EAE5C9E009EA9AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FB2F2DB1EC4C7AC0080798D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3FB2F2DD1EC4C7B00080798D /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FB2F2DE1EC4C7B00080798D /* AVKit.framework in Frameworks */,
+				3FB2F2DC1EC4C7AC0080798D /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +95,7 @@
 				3F9F26C91EAE5C9E009EA9AF /* Rhyme_StashTests */,
 				3F9F26D41EAE5C9E009EA9AF /* Rhyme_StashUITests */,
 				3F9F26B31EAE5C9D009EA9AF /* Products */,
+				3FB2F2DA1EC4C7AC0080798D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +141,15 @@
 				3F9F26D71EAE5C9E009EA9AF /* Info.plist */,
 			);
 			path = Rhyme_StashUITests;
+			sourceTree = "<group>";
+		};
+		3FB2F2DA1EC4C7AC0080798D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FB2F2DD1EC4C7B00080798D /* AVKit.framework */,
+				3FB2F2DB1EC4C7AC0080798D /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

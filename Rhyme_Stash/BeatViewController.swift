@@ -7,19 +7,41 @@
 //
 
 import UIKit
+import AVFoundation
 
 class BeatViewController: UIViewController {
 
+    var player: AVAudioPlayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let path = Bundle.main.path(forResource: "wu-tang", ofType: "mp3")!
+        let url = URL(fileURLWithPath: path)
+        
+        do {
+            let sound = try AVAudioPlayer(contentsOf: url)
+            player = sound
+            sound.play()
+        } catch {
+            // couldn't load file :(
+        }
+    
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    @IBAction func playSound(_ sender: UIButton) {
+    
+    player.play()
     }
+    @IBAction func stopSound(_ sender: UIButton) {
+    }
+    
+    
+    
+    
+    
     
 
     /*

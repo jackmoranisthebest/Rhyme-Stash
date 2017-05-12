@@ -17,6 +17,7 @@ class RhymeViewController: UIViewController {
     @IBOutlet weak var RhymeThree: UIButton!
     @IBOutlet weak var RhymeFour: UIButton!
     
+    var rhymeWord = ""
     
     
     override func viewDidLoad()
@@ -67,8 +68,6 @@ class RhymeViewController: UIViewController {
         RhymeThree.setTitle(word4, for: .normal)
         RhymeFour.setTitle(word5, for: .normal)
     }
-    
-    
     
     
     func associate(json1: JSON)
