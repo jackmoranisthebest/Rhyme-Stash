@@ -31,6 +31,7 @@ class ViewController: UIViewController
     
     
     @IBAction func findRhymez(_ sender: UIButton) {
+        startingWord = startingWordText.text!
     }
     
 }
