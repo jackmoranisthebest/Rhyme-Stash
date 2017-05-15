@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="utg-I8-sbm">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="utg-I8-sbm">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,35 +22,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blueFade" translatesAutoresizingMaskIntoConstraints="NO" id="IE7-Nk-wdx">
+                                <rect key="frame" x="0.0" y="56" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lTE-za-uEE">
-                                <rect key="frame" x="139" y="184" width="97" height="30"/>
+                                <rect key="frame" x="139" y="223" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rhyme Stash" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5h-sq-0bi">
-                                <rect key="frame" x="121" y="50" width="132" height="51"/>
+                                <rect key="frame" x="42" y="72" width="291" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8e-dZ-Mzr">
-                                <rect key="frame" x="143" y="222" width="88" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Find Rhymes"/>
-                                <connections>
-                                    <action selector="findRhymez:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eAU-ci-ugh"/>
-                                    <segue destination="UcM-Il-jGe" kind="show" identifier="rhymeSegue1" id="QUp-Ho-bnT"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPB-b4-a0v">
-                                <rect key="frame" x="148" y="566" width="79" height="30"/>
+                                <rect key="frame" x="139" y="566" width="104" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                                 <state key="normal" title="Select Beat"/>
                                 <connections>
                                     <segue destination="iPJ-hV-0Gm" kind="show" identifier="beatSegue" id="6pW-JA-dBO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8e-dZ-Mzr">
+                                <rect key="frame" x="83" y="272" width="209" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                <state key="normal" title="Find Rhymes">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="findRhymez:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eAU-ci-ugh"/>
+                                    <segue destination="UcM-Il-jGe" kind="show" identifier="rhymeSegue1" id="QUp-Ho-bnT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -113,67 +121,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9g-4T-zIY">
-                                <rect key="frame" x="0.0" y="173" width="375" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blueFade" translatesAutoresizingMaskIntoConstraints="NO" id="o5I-7H-oHG">
+                                <rect key="frame" x="-34" y="48" width="409" height="619"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9g-4T-zIY">
+                                <rect key="frame" x="0.0" y="129" width="375" height="59"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="21"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="rhyme0:" destination="UcM-Il-jGe" eventType="touchUpInside" id="IEb-3O-jOy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKd-T9-SuG">
-                                <rect key="frame" x="0.0" y="240" width="375" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKd-T9-SuG">
+                                <rect key="frame" x="0.0" y="196" width="375" height="53"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="21"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="rhyme1:" destination="UcM-Il-jGe" eventType="touchUpInside" id="Po5-4I-BTT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hcz-Jt-Us1">
-                                <rect key="frame" x="0.0" y="301" width="375" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hcz-Jt-Us1">
+                                <rect key="frame" x="0.0" y="257" width="375" height="55"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="21"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="rhyme2:" destination="UcM-Il-jGe" eventType="touchUpInside" id="jWk-oR-XB2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zen-gs-IKN">
-                                <rect key="frame" x="0.0" y="364" width="375" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zen-gs-IKN">
+                                <rect key="frame" x="0.0" y="320" width="375" height="54"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="21"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="rhyme3:" destination="UcM-Il-jGe" eventType="touchUpInside" id="09z-MK-Hhp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuR-Ty-Vqy">
-                                <rect key="frame" x="0.0" y="426" width="375" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuR-Ty-Vqy">
+                                <rect key="frame" x="0.0" y="382" width="375" height="54"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="21"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="rhyme4:" destination="UcM-Il-jGe" eventType="touchUpInside" id="z2m-uh-qJu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ImV-Kr-BVg">
-                                <rect key="frame" x="16" y="546" width="64" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ImV-Kr-BVg">
+                                <rect key="frame" x="16" y="546" width="93" height="30"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                                 <state key="normal" title="Play Beat"/>
                                 <connections>
                                     <action selector="playBeat:" destination="UcM-Il-jGe" eventType="touchUpInside" id="MLN-0h-62k"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrD-8C-XBE">
-                                <rect key="frame" x="306" y="78" width="61" height="30"/>
-                                <state key="normal" title="Syllables"/>
-                                <connections>
-                                    <action selector="changeNumSyllables:" destination="UcM-Il-jGe" eventType="touchUpInside" id="ibU-Ur-juW"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2e-Lu-x7y">
-                                <rect key="frame" x="13" y="78" width="53" height="30"/>
-                                <state key="normal" title="Refresh"/>
-                                <connections>
-                                    <action selector="refreshSuggestions:" destination="UcM-Il-jGe" eventType="touchUpInside" id="MlV-0C-RMS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJ8-dp-5LM">
-                                <rect key="frame" x="291" y="546" width="68" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJ8-dp-5LM">
+                                <rect key="frame" x="266" y="546" width="93" height="30"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                                 <state key="normal" title="Stop Beat"/>
                                 <connections>
                                     <action selector="stopBeat:" destination="UcM-Il-jGe" eventType="touchUpInside" id="u8I-7o-3GS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2e-Lu-x7y">
+                                <rect key="frame" x="141" y="490" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                <state key="normal" title="Refresh"/>
+                                <connections>
+                                    <action selector="refreshSuggestions:" destination="UcM-Il-jGe" eventType="touchUpInside" id="MlV-0C-RMS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -182,9 +206,6 @@
                             <constraint firstItem="YuR-Ty-Vqy" firstAttribute="top" secondItem="zen-gs-IKN" secondAttribute="bottom" constant="32" id="0Tt-O9-0My"/>
                             <constraint firstItem="LJ8-dp-5LM" firstAttribute="leading" secondItem="ImV-Kr-BVg" secondAttribute="trailing" constant="211" id="12a-PP-Klv"/>
                             <constraint firstAttribute="trailing" secondItem="s9g-4T-zIY" secondAttribute="trailing" id="1gW-iw-8zI"/>
-                            <constraint firstAttribute="trailing" secondItem="hrD-8C-XBE" secondAttribute="trailing" constant="8" id="3oe-9b-AQt"/>
-                            <constraint firstItem="hrD-8C-XBE" firstAttribute="top" secondItem="owv-eg-Iq5" secondAttribute="bottom" constant="14" id="Awn-h7-Dvm"/>
-                            <constraint firstItem="hrD-8C-XBE" firstAttribute="leading" secondItem="d2e-Lu-x7y" secondAttribute="trailing" constant="240" id="BJI-Sr-gAr"/>
                             <constraint firstItem="ImV-Kr-BVg" firstAttribute="top" secondItem="YuR-Ty-Vqy" secondAttribute="bottom" constant="90" id="CVc-LI-c5c"/>
                             <constraint firstItem="gcL-hZ-hEg" firstAttribute="top" secondItem="ImV-Kr-BVg" secondAttribute="bottom" constant="91" id="Dfc-qW-XYo"/>
                             <constraint firstItem="Hcz-Jt-Us1" firstAttribute="top" secondItem="sKd-T9-SuG" secondAttribute="bottom" constant="31" id="EA6-t4-QbX"/>
@@ -195,11 +216,9 @@
                             <constraint firstItem="LJ8-dp-5LM" firstAttribute="trailing" secondItem="zEM-id-Bly" secondAttribute="trailingMargin" id="SaI-qd-qTf"/>
                             <constraint firstItem="s9g-4T-zIY" firstAttribute="trailing" secondItem="sKd-T9-SuG" secondAttribute="trailing" id="YQO-4P-P5f"/>
                             <constraint firstItem="zen-gs-IKN" firstAttribute="trailing" secondItem="YuR-Ty-Vqy" secondAttribute="trailing" id="ajK-WW-tCq"/>
-                            <constraint firstItem="s9g-4T-zIY" firstAttribute="top" secondItem="hrD-8C-XBE" secondAttribute="bottom" constant="65" id="caZ-8N-gEB"/>
                             <constraint firstItem="LJ8-dp-5LM" firstAttribute="leading" secondItem="ImV-Kr-BVg" secondAttribute="trailing" constant="211" id="dVf-Ji-iSb"/>
                             <constraint firstItem="sKd-T9-SuG" firstAttribute="trailing" secondItem="Hcz-Jt-Us1" secondAttribute="trailing" id="lzA-YW-FWE"/>
                             <constraint firstItem="ImV-Kr-BVg" firstAttribute="leading" secondItem="zEM-id-Bly" secondAttribute="leadingMargin" id="mpp-x0-6u0"/>
-                            <constraint firstItem="d2e-Lu-x7y" firstAttribute="baseline" secondItem="hrD-8C-XBE" secondAttribute="baseline" id="mxh-tX-0oX"/>
                             <constraint firstItem="s9g-4T-zIY" firstAttribute="leading" secondItem="zEM-id-Bly" secondAttribute="leading" id="pHx-Jg-ymz"/>
                             <constraint firstItem="zen-gs-IKN" firstAttribute="top" secondItem="Hcz-Jt-Us1" secondAttribute="bottom" constant="33" id="rIi-J6-F3b"/>
                             <constraint firstItem="sKd-T9-SuG" firstAttribute="leading" secondItem="Hcz-Jt-Us1" secondAttribute="leading" id="tKv-TT-1Pq"/>
@@ -238,4 +257,7 @@
             <point key="canvasLocation" x="104.8" y="131.78410794602701"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="blueFade" width="652" height="652"/>
+    </resources>
 </document>
