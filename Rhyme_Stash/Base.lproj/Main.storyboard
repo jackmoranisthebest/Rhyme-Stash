@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,10 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blueFade" translatesAutoresizingMaskIntoConstraints="NO" id="IE7-Nk-wdx">
-                                <rect key="frame" x="0.0" y="56" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lTE-za-uEE">
                                 <rect key="frame" x="139" y="223" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -61,6 +56,10 @@
                                     <segue destination="UcM-Il-jGe" kind="show" identifier="rhymeSegue1" id="QUp-Ho-bnT"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blueFade" translatesAutoresizingMaskIntoConstraints="NO" id="IE7-Nk-wdx">
+                                <rect key="frame" x="-16" y="44" width="407" height="635"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -121,12 +120,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blueFade" translatesAutoresizingMaskIntoConstraints="NO" id="o5I-7H-oHG">
-                                <rect key="frame" x="-34" y="48" width="409" height="619"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="blueFade" translatesAutoresizingMaskIntoConstraints="NO" id="o5I-7H-oHG">
+                                <rect key="frame" x="-17" y="64" width="409" height="619"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9g-4T-zIY">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9g-4T-zIY">
                                 <rect key="frame" x="0.0" y="129" width="375" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="21"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -135,8 +134,9 @@
                                     <action selector="rhyme0:" destination="UcM-Il-jGe" eventType="touchUpInside" id="IEb-3O-jOy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKd-T9-SuG">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKd-T9-SuG">
                                 <rect key="frame" x="0.0" y="196" width="375" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="21"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -145,8 +145,9 @@
                                     <action selector="rhyme1:" destination="UcM-Il-jGe" eventType="touchUpInside" id="Po5-4I-BTT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hcz-Jt-Us1">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hcz-Jt-Us1">
                                 <rect key="frame" x="0.0" y="257" width="375" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="21"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -155,8 +156,9 @@
                                     <action selector="rhyme2:" destination="UcM-Il-jGe" eventType="touchUpInside" id="jWk-oR-XB2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zen-gs-IKN">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zen-gs-IKN">
                                 <rect key="frame" x="0.0" y="320" width="375" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="21"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -165,8 +167,9 @@
                                     <action selector="rhyme3:" destination="UcM-Il-jGe" eventType="touchUpInside" id="09z-MK-Hhp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuR-Ty-Vqy">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuR-Ty-Vqy">
                                 <rect key="frame" x="0.0" y="382" width="375" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="21"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -175,16 +178,18 @@
                                     <action selector="rhyme4:" destination="UcM-Il-jGe" eventType="touchUpInside" id="z2m-uh-qJu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ImV-Kr-BVg">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ImV-Kr-BVg">
                                 <rect key="frame" x="16" y="546" width="93" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                                 <state key="normal" title="Play Beat"/>
                                 <connections>
                                     <action selector="playBeat:" destination="UcM-Il-jGe" eventType="touchUpInside" id="MLN-0h-62k"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJ8-dp-5LM">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJ8-dp-5LM">
                                 <rect key="frame" x="266" y="546" width="93" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                                 <state key="normal" title="Stop Beat"/>
                                 <connections>
@@ -203,27 +208,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="YuR-Ty-Vqy" firstAttribute="top" secondItem="zen-gs-IKN" secondAttribute="bottom" constant="32" id="0Tt-O9-0My"/>
-                            <constraint firstItem="LJ8-dp-5LM" firstAttribute="leading" secondItem="ImV-Kr-BVg" secondAttribute="trailing" constant="211" id="12a-PP-Klv"/>
-                            <constraint firstAttribute="trailing" secondItem="s9g-4T-zIY" secondAttribute="trailing" id="1gW-iw-8zI"/>
-                            <constraint firstItem="ImV-Kr-BVg" firstAttribute="top" secondItem="YuR-Ty-Vqy" secondAttribute="bottom" constant="90" id="CVc-LI-c5c"/>
-                            <constraint firstItem="gcL-hZ-hEg" firstAttribute="top" secondItem="ImV-Kr-BVg" secondAttribute="bottom" constant="91" id="Dfc-qW-XYo"/>
-                            <constraint firstItem="Hcz-Jt-Us1" firstAttribute="top" secondItem="sKd-T9-SuG" secondAttribute="bottom" constant="31" id="EA6-t4-QbX"/>
-                            <constraint firstItem="s9g-4T-zIY" firstAttribute="leading" secondItem="sKd-T9-SuG" secondAttribute="leading" id="ECA-Hy-U4P"/>
-                            <constraint firstItem="LJ8-dp-5LM" firstAttribute="top" secondItem="YuR-Ty-Vqy" secondAttribute="bottom" constant="90" id="Egg-MR-zka"/>
-                            <constraint firstItem="gcL-hZ-hEg" firstAttribute="top" secondItem="LJ8-dp-5LM" secondAttribute="bottom" constant="91" id="GRT-2z-xAL"/>
-                            <constraint firstItem="Hcz-Jt-Us1" firstAttribute="leading" secondItem="zen-gs-IKN" secondAttribute="leading" id="Gtn-pa-jUt"/>
-                            <constraint firstItem="LJ8-dp-5LM" firstAttribute="trailing" secondItem="zEM-id-Bly" secondAttribute="trailingMargin" id="SaI-qd-qTf"/>
-                            <constraint firstItem="s9g-4T-zIY" firstAttribute="trailing" secondItem="sKd-T9-SuG" secondAttribute="trailing" id="YQO-4P-P5f"/>
-                            <constraint firstItem="zen-gs-IKN" firstAttribute="trailing" secondItem="YuR-Ty-Vqy" secondAttribute="trailing" id="ajK-WW-tCq"/>
-                            <constraint firstItem="LJ8-dp-5LM" firstAttribute="leading" secondItem="ImV-Kr-BVg" secondAttribute="trailing" constant="211" id="dVf-Ji-iSb"/>
-                            <constraint firstItem="sKd-T9-SuG" firstAttribute="trailing" secondItem="Hcz-Jt-Us1" secondAttribute="trailing" id="lzA-YW-FWE"/>
-                            <constraint firstItem="ImV-Kr-BVg" firstAttribute="leading" secondItem="zEM-id-Bly" secondAttribute="leadingMargin" id="mpp-x0-6u0"/>
-                            <constraint firstItem="s9g-4T-zIY" firstAttribute="leading" secondItem="zEM-id-Bly" secondAttribute="leading" id="pHx-Jg-ymz"/>
-                            <constraint firstItem="zen-gs-IKN" firstAttribute="top" secondItem="Hcz-Jt-Us1" secondAttribute="bottom" constant="33" id="rIi-J6-F3b"/>
-                            <constraint firstItem="sKd-T9-SuG" firstAttribute="leading" secondItem="Hcz-Jt-Us1" secondAttribute="leading" id="tKv-TT-1Pq"/>
-                            <constraint firstItem="Hcz-Jt-Us1" firstAttribute="trailing" secondItem="zen-gs-IKN" secondAttribute="trailing" id="thi-09-m52"/>
-                            <constraint firstItem="zen-gs-IKN" firstAttribute="leading" secondItem="YuR-Ty-Vqy" secondAttribute="leading" id="uUY-Dv-hNe"/>
+                            <constraint firstItem="o5I-7H-oHG" firstAttribute="leading" secondItem="zEM-id-Bly" secondAttribute="leading" id="2K4-NY-3v1"/>
+                            <constraint firstItem="o5I-7H-oHG" firstAttribute="top" secondItem="zEM-id-Bly" secondAttribute="top" id="8w2-YH-UA7"/>
+                            <constraint firstItem="gcL-hZ-hEg" firstAttribute="top" secondItem="o5I-7H-oHG" secondAttribute="bottom" id="flQ-Ii-q1R"/>
                         </constraints>
                     </view>
                     <connections>
