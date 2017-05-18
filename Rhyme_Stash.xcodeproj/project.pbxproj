@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2697F3481EBA953100BC5EB5 /* RhymeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697F3471EBA953100BC5EB5 /* RhymeViewController.swift */; };
 		2697F34A1EBA954200BC5EB5 /* BeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697F3491EBA954200BC5EB5 /* BeatViewController.swift */; };
+		26A1BEA91ECBC07700393D3C /* extraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A1BEA81ECBC07700393D3C /* extraViewController.swift */; };
 		26A8DA8C1ECA1043001F2158 /* wu-tang.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 26A8DA8B1ECA1043001F2158 /* wu-tang.mp3 */; };
 		3F58F38C1EBCDC80009EF23A /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F58F38B1EBCDC80009EF23A /* JSON.swift */; };
 		3F58F38D1EBCDC80009EF23A /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F58F38B1EBCDC80009EF23A /* JSON.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		2697F3471EBA953100BC5EB5 /* RhymeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RhymeViewController.swift; sourceTree = "<group>"; };
 		2697F3491EBA954200BC5EB5 /* BeatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeatViewController.swift; sourceTree = "<group>"; };
+		26A1BEA81ECBC07700393D3C /* extraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extraViewController.swift; sourceTree = "<group>"; };
 		26A8DA8B1ECA1043001F2158 /* wu-tang.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "wu-tang.mp3"; sourceTree = "<group>"; };
 		3F58F38B1EBCDC80009EF23A /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		3F9F26B21EAE5C9D009EA9AF /* Rhyme_Stash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rhyme_Stash.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +118,7 @@
 			children = (
 				3F9F26B51EAE5C9D009EA9AF /* AppDelegate.swift */,
 				3F9F26B71EAE5C9D009EA9AF /* ViewController.swift */,
+				26A1BEA81ECBC07700393D3C /* extraViewController.swift */,
 				3F9F26B91EAE5C9D009EA9AF /* Main.storyboard */,
 				3F58F38B1EBCDC80009EF23A /* JSON.swift */,
 				2697F3471EBA953100BC5EB5 /* RhymeViewController.swift */,
@@ -293,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2697F3481EBA953100BC5EB5 /* RhymeViewController.swift in Sources */,
+				26A1BEA91ECBC07700393D3C /* extraViewController.swift in Sources */,
 				3F58F38C1EBCDC80009EF23A /* JSON.swift in Sources */,
 				3F9F26B81EAE5C9D009EA9AF /* ViewController.swift in Sources */,
 				2697F34A1EBA954200BC5EB5 /* BeatViewController.swift in Sources */,

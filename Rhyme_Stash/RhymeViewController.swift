@@ -25,7 +25,7 @@ class RhymeViewController: UIViewController {
     var word3 = ""
     var word4 = ""
     var word5 = ""
-   
+    
     
     @IBOutlet weak var RhymeZero: UIButton!
     @IBOutlet weak var RhymeOne: UIButton!
@@ -38,7 +38,7 @@ class RhymeViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.title = rhymeWord
-
+        
         // Do any additional setup after loading the view, typically from a nib.
         
         let urlString = "https://api.datamuse.com/words?rel_rhy=\(rhymeWord)"
@@ -66,7 +66,7 @@ class RhymeViewController: UIViewController {
                 associate(json1: json1)//function that lets me use the json data
             }
         }
-      
+        
         //AUDIO PLAYER
         
         let path = Bundle.main.path(forResource: "wu-tang.mp3", ofType: nil)!
@@ -80,7 +80,7 @@ class RhymeViewController: UIViewController {
         }
         
     }
- 
+    
     func parse(json: JSON)
     {
         word1 = json[a]["word"].stringValue
@@ -88,7 +88,7 @@ class RhymeViewController: UIViewController {
         word3 = json[c]["word"].stringValue
         word4 = json[d]["word"].stringValue
         word5 = json[e]["word"].stringValue
-
+        
         RhymeZero.setTitle(word1, for: .normal)
         RhymeOne.setTitle(word2, for: .normal)
         RhymeTwo.setTitle(word3, for: .normal)
@@ -99,31 +99,36 @@ class RhymeViewController: UIViewController {
     
     func associate(json1: JSON)
     {
-      //  let word0 = json1[0]["word"].stringValue
-      //  RhymeFour.setTitle(word0, for: .normal)
+        //  let word0 = json1[0]["word"].stringValue
+        //  RhymeFour.setTitle(word0, for: .normal)
         print(json1[0]["word"].stringValue)
     }
     
-
-    @IBAction func rhyme0(_ sender: UIButton) {
-    }
     
-    @IBAction func rhyme1(_ sender: UIButton) {
-    }
     
-    @IBAction func rhyme2(_ sender: UIButton) {
-    }
-    
-    @IBAction func rhyme3(_ sender: UIButton) {
-    }
-    
-    @IBAction func rhyme4(_ sender: UIButton) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let svc = segue.destination as! extraViewController
+        
+        if segue.identifier == "word1"{
+            svc.extra = self.word1
+        }
+        if segue.identifier == "word2"{
+            svc.extra = self.word2
+        }
+        if segue.identifier == "word3"{
+            svc.extra = self.word3
+        }
+        if segue.identifier == "word4"{
+            svc.extra = self.word4
+        }
+        if segue.identifier == "word5"{
+            svc.extra = self.word5
+        }
     }
     
     @IBAction func playBeat(_ sender: UIButton) {
         
         player.play()
-        
     }
     
     @IBAction func stopBeat(_ sender: UIButton) {
@@ -131,9 +136,6 @@ class RhymeViewController: UIViewController {
             player.stop()
         }
     }
-    
-    
-    
     
     @IBAction func refreshSuggestions(_ sender: UIButton) {
         a = a + count
@@ -158,11 +160,11 @@ class RhymeViewController: UIViewController {
         }
         viewDidLoad()
     }
-
+    
     @IBAction func changeNumSyllables(_ sender: UIButton) {
     }
     
-
-  
-
+    
+    
+    
 }
