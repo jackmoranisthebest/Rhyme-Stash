@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="utg-I8-sbm">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="utg-I8-sbm">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,11 +23,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blueFade" translatesAutoresizingMaskIntoConstraints="NO" id="IE7-Nk-wdx">
-                                <rect key="frame" x="0.0" y="56" width="375" height="603"/>
+                                <rect key="frame" x="-143" y="-9" width="652" height="676"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lTE-za-uEE">
-                                <rect key="frame" x="139" y="223" width="97" height="30"/>
+                                <rect key="frame" x="139" y="232" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -40,17 +40,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPB-b4-a0v">
-                                <rect key="frame" x="139" y="566" width="104" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
-                                <state key="normal" title="Select Beat"/>
-                                <connections>
-                                    <segue destination="iPJ-hV-0Gm" kind="show" identifier="beatSegue" id="6pW-JA-dBO"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8e-dZ-Mzr">
-                                <rect key="frame" x="83" y="272" width="209" height="50"/>
+                                <rect key="frame" x="83" y="270" width="209" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                                 <state key="normal" title="Find Rhymes">
@@ -59,6 +50,15 @@
                                 <connections>
                                     <action selector="findRhymez:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eAU-ci-ugh"/>
                                     <segue destination="UcM-Il-jGe" kind="show" identifier="rhymeSegue1" id="QUp-Ho-bnT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPB-b4-a0v">
+                                <rect key="frame" x="132" y="567" width="104" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                <state key="normal" title="Select Beat"/>
+                                <connections>
+                                    <segue destination="iPJ-hV-0Gm" kind="show" identifier="beatSegue" id="6pW-JA-dBO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -121,12 +121,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blueFade" translatesAutoresizingMaskIntoConstraints="NO" id="o5I-7H-oHG">
-                                <rect key="frame" x="-34" y="48" width="409" height="619"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueFade" translatesAutoresizingMaskIntoConstraints="NO" id="o5I-7H-oHG">
+                                <rect key="frame" x="-34" y="-31" width="409" height="731"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9g-4T-zIY">
-                                <rect key="frame" x="0.0" y="129" width="375" height="59"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9g-4T-zIY">
+                                <rect key="frame" x="0.0" y="130" width="375" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="Y3C-Df-7Ij"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="21"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -137,6 +139,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKd-T9-SuG">
                                 <rect key="frame" x="0.0" y="196" width="375" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="xHP-Qb-2eg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="21"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -155,8 +160,11 @@
                                     <action selector="rhyme2:" destination="UcM-Il-jGe" eventType="touchUpInside" id="jWk-oR-XB2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zen-gs-IKN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zen-gs-IKN">
                                 <rect key="frame" x="0.0" y="320" width="375" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="6Nv-bz-Ra6"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="21"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -165,8 +173,11 @@
                                     <action selector="rhyme3:" destination="UcM-Il-jGe" eventType="touchUpInside" id="09z-MK-Hhp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuR-Ty-Vqy">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuR-Ty-Vqy">
                                 <rect key="frame" x="0.0" y="382" width="375" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="6zc-tA-uwn"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="21"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -175,25 +186,31 @@
                                     <action selector="rhyme4:" destination="UcM-Il-jGe" eventType="touchUpInside" id="z2m-uh-qJu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ImV-Kr-BVg">
-                                <rect key="frame" x="16" y="546" width="93" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ImV-Kr-BVg">
+                                <rect key="frame" x="18" y="542" width="91" height="34"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                                 <state key="normal" title="Play Beat"/>
                                 <connections>
                                     <action selector="playBeat:" destination="UcM-Il-jGe" eventType="touchUpInside" id="MLN-0h-62k"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJ8-dp-5LM">
-                                <rect key="frame" x="266" y="546" width="93" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJ8-dp-5LM">
+                                <rect key="frame" x="266" y="544" width="93" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="93" id="LMm-BF-pg0"/>
+                                    <constraint firstAttribute="height" constant="30" id="fh2-Mo-cfX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                                 <state key="normal" title="Stop Beat"/>
                                 <connections>
                                     <action selector="stopBeat:" destination="UcM-Il-jGe" eventType="touchUpInside" id="u8I-7o-3GS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2e-Lu-x7y">
-                                <rect key="frame" x="141" y="490" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2e-Lu-x7y">
+                                <rect key="frame" x="151" y="484" width="72" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="YDh-Z0-hIJ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                                 <state key="normal" title="Refresh"/>
                                 <connections>
@@ -203,27 +220,32 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="YuR-Ty-Vqy" firstAttribute="top" secondItem="zen-gs-IKN" secondAttribute="bottom" constant="32" id="0Tt-O9-0My"/>
-                            <constraint firstItem="LJ8-dp-5LM" firstAttribute="leading" secondItem="ImV-Kr-BVg" secondAttribute="trailing" constant="211" id="12a-PP-Klv"/>
-                            <constraint firstAttribute="trailing" secondItem="s9g-4T-zIY" secondAttribute="trailing" id="1gW-iw-8zI"/>
-                            <constraint firstItem="ImV-Kr-BVg" firstAttribute="top" secondItem="YuR-Ty-Vqy" secondAttribute="bottom" constant="90" id="CVc-LI-c5c"/>
-                            <constraint firstItem="gcL-hZ-hEg" firstAttribute="top" secondItem="ImV-Kr-BVg" secondAttribute="bottom" constant="91" id="Dfc-qW-XYo"/>
-                            <constraint firstItem="Hcz-Jt-Us1" firstAttribute="top" secondItem="sKd-T9-SuG" secondAttribute="bottom" constant="31" id="EA6-t4-QbX"/>
-                            <constraint firstItem="s9g-4T-zIY" firstAttribute="leading" secondItem="sKd-T9-SuG" secondAttribute="leading" id="ECA-Hy-U4P"/>
-                            <constraint firstItem="LJ8-dp-5LM" firstAttribute="top" secondItem="YuR-Ty-Vqy" secondAttribute="bottom" constant="90" id="Egg-MR-zka"/>
-                            <constraint firstItem="gcL-hZ-hEg" firstAttribute="top" secondItem="LJ8-dp-5LM" secondAttribute="bottom" constant="91" id="GRT-2z-xAL"/>
-                            <constraint firstItem="Hcz-Jt-Us1" firstAttribute="leading" secondItem="zen-gs-IKN" secondAttribute="leading" id="Gtn-pa-jUt"/>
-                            <constraint firstItem="LJ8-dp-5LM" firstAttribute="trailing" secondItem="zEM-id-Bly" secondAttribute="trailingMargin" id="SaI-qd-qTf"/>
-                            <constraint firstItem="s9g-4T-zIY" firstAttribute="trailing" secondItem="sKd-T9-SuG" secondAttribute="trailing" id="YQO-4P-P5f"/>
-                            <constraint firstItem="zen-gs-IKN" firstAttribute="trailing" secondItem="YuR-Ty-Vqy" secondAttribute="trailing" id="ajK-WW-tCq"/>
-                            <constraint firstItem="LJ8-dp-5LM" firstAttribute="leading" secondItem="ImV-Kr-BVg" secondAttribute="trailing" constant="211" id="dVf-Ji-iSb"/>
-                            <constraint firstItem="sKd-T9-SuG" firstAttribute="trailing" secondItem="Hcz-Jt-Us1" secondAttribute="trailing" id="lzA-YW-FWE"/>
-                            <constraint firstItem="ImV-Kr-BVg" firstAttribute="leading" secondItem="zEM-id-Bly" secondAttribute="leadingMargin" id="mpp-x0-6u0"/>
-                            <constraint firstItem="s9g-4T-zIY" firstAttribute="leading" secondItem="zEM-id-Bly" secondAttribute="leading" id="pHx-Jg-ymz"/>
-                            <constraint firstItem="zen-gs-IKN" firstAttribute="top" secondItem="Hcz-Jt-Us1" secondAttribute="bottom" constant="33" id="rIi-J6-F3b"/>
-                            <constraint firstItem="sKd-T9-SuG" firstAttribute="leading" secondItem="Hcz-Jt-Us1" secondAttribute="leading" id="tKv-TT-1Pq"/>
-                            <constraint firstItem="Hcz-Jt-Us1" firstAttribute="trailing" secondItem="zen-gs-IKN" secondAttribute="trailing" id="thi-09-m52"/>
-                            <constraint firstItem="zen-gs-IKN" firstAttribute="leading" secondItem="YuR-Ty-Vqy" secondAttribute="leading" id="uUY-Dv-hNe"/>
+                            <constraint firstItem="s9g-4T-zIY" firstAttribute="trailing" secondItem="Hcz-Jt-Us1" secondAttribute="trailing" id="1Et-Mp-grs"/>
+                            <constraint firstItem="s9g-4T-zIY" firstAttribute="leading" secondItem="sKd-T9-SuG" secondAttribute="leading" id="2Ff-yw-4S3"/>
+                            <constraint firstItem="Hcz-Jt-Us1" firstAttribute="top" secondItem="sKd-T9-SuG" secondAttribute="bottom" constant="8" symbolic="YES" id="4Z0-UJ-pHz"/>
+                            <constraint firstItem="o5I-7H-oHG" firstAttribute="top" secondItem="zEM-id-Bly" secondAttribute="topMargin" constant="-31" id="5Yx-fZ-paR"/>
+                            <constraint firstItem="zen-gs-IKN" firstAttribute="top" secondItem="Hcz-Jt-Us1" secondAttribute="bottom" constant="8" symbolic="YES" id="99s-ZE-GC0"/>
+                            <constraint firstAttribute="trailing" secondItem="s9g-4T-zIY" secondAttribute="trailing" id="EiD-14-nGl"/>
+                            <constraint firstItem="LJ8-dp-5LM" firstAttribute="trailing" secondItem="zEM-id-Bly" secondAttribute="trailingMargin" id="EpA-0W-zxo"/>
+                            <constraint firstItem="ImV-Kr-BVg" firstAttribute="baseline" secondItem="LJ8-dp-5LM" secondAttribute="baseline" id="JIy-mV-F4l"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="o5I-7H-oHG" secondAttribute="bottom" constant="-33" id="M6M-Eh-kBD"/>
+                            <constraint firstItem="s9g-4T-zIY" firstAttribute="top" secondItem="owv-eg-Iq5" secondAttribute="bottom" constant="66" id="POm-ef-5Lq"/>
+                            <constraint firstItem="s9g-4T-zIY" firstAttribute="leading" secondItem="YuR-Ty-Vqy" secondAttribute="leading" id="PxB-Eb-s9B"/>
+                            <constraint firstItem="s9g-4T-zIY" firstAttribute="trailing" secondItem="o5I-7H-oHG" secondAttribute="trailing" id="U3I-J9-iTT"/>
+                            <constraint firstItem="s9g-4T-zIY" firstAttribute="trailing" secondItem="sKd-T9-SuG" secondAttribute="trailing" id="XsN-Qv-Jni"/>
+                            <constraint firstItem="s9g-4T-zIY" firstAttribute="trailing" secondItem="YuR-Ty-Vqy" secondAttribute="trailing" id="ahT-ks-MIG"/>
+                            <constraint firstItem="d2e-Lu-x7y" firstAttribute="top" secondItem="YuR-Ty-Vqy" secondAttribute="bottom" constant="48" id="b2g-TG-yTI"/>
+                            <constraint firstItem="ImV-Kr-BVg" firstAttribute="leading" secondItem="zEM-id-Bly" secondAttribute="leadingMargin" constant="2" id="diw-l1-zYd"/>
+                            <constraint firstItem="o5I-7H-oHG" firstAttribute="leading" secondItem="zEM-id-Bly" secondAttribute="leadingMargin" constant="-50" id="i0z-C2-CqO"/>
+                            <constraint firstItem="YuR-Ty-Vqy" firstAttribute="top" secondItem="zen-gs-IKN" secondAttribute="bottom" constant="8" symbolic="YES" id="j1F-Rq-Vbf"/>
+                            <constraint firstItem="s9g-4T-zIY" firstAttribute="leading" secondItem="Hcz-Jt-Us1" secondAttribute="leading" id="jS3-RM-zdG"/>
+                            <constraint firstItem="sKd-T9-SuG" firstAttribute="top" secondItem="s9g-4T-zIY" secondAttribute="bottom" constant="8" id="m4d-uS-zFT"/>
+                            <constraint firstItem="s9g-4T-zIY" firstAttribute="centerX" secondItem="d2e-Lu-x7y" secondAttribute="centerX" id="q6O-1L-esu"/>
+                            <constraint firstItem="s9g-4T-zIY" firstAttribute="leading" secondItem="zen-gs-IKN" secondAttribute="leading" id="ttE-Qc-mIf"/>
+                            <constraint firstItem="gcL-hZ-hEg" firstAttribute="top" secondItem="ImV-Kr-BVg" secondAttribute="bottom" constant="91" id="uwM-cL-edh"/>
+                            <constraint firstItem="s9g-4T-zIY" firstAttribute="leading" secondItem="zEM-id-Bly" secondAttribute="leading" id="uxM-Gf-Btb"/>
+                            <constraint firstItem="s9g-4T-zIY" firstAttribute="trailing" secondItem="zen-gs-IKN" secondAttribute="trailing" id="v80-A7-Ole"/>
+                            <constraint firstItem="gcL-hZ-hEg" firstAttribute="top" secondItem="d2e-Lu-x7y" secondAttribute="bottom" constant="149" id="wO1-yD-duV"/>
                         </constraints>
                     </view>
                     <connections>
