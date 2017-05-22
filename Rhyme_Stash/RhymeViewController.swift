@@ -37,6 +37,21 @@ class RhymeViewController: UIViewController {
     {
         super.viewDidLoad()
         
+        RhymeZero.layer.cornerRadius = 8.0
+        RhymeZero.clipsToBounds = true
+        
+        RhymeOne.layer.cornerRadius = 8.0
+        RhymeOne.clipsToBounds = true
+        
+        RhymeTwo.layer.cornerRadius = 8.0
+        RhymeTwo.clipsToBounds = true
+        
+        RhymeThree.layer.cornerRadius = 8.0
+        RhymeThree.clipsToBounds = true
+        
+        RhymeFour.layer.cornerRadius = 8.0
+        RhymeFour.clipsToBounds = true
+        
         navigationItem.title = rhymeWord
         
         // Do any additional setup after loading the view, typically from a nib.
