@@ -173,7 +173,18 @@ class RhymeViewController: UIViewController {
             RhymeThree.setTitle(word4, for: .normal)
             RhymeFour.setTitle(word5, for: .normal)
         }
-        viewDidLoad()
+        let urlString = "https://api.datamuse.com/words?rel_rhy=\(rhymeWord)"
+        //"https://api.datamuse.com/words?rel_rhy=beat"
+        
+        if let url = NSURL(string: urlString)
+        {
+            if let myData = try? NSData(contentsOf: url as URL, options: [])//try cheks for url connection
+            {
+                let json = JSON(data: myData as Data)
+                print(json[0]["word"].stringValue)
+                parse(json: json)//function that lets me use the json data
+            }
+        }
     }
     
     @IBAction func changeNumSyllables(_ sender: UIButton) {
