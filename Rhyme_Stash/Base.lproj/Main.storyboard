@@ -49,15 +49,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Rhymestashlogo" translatesAutoresizingMaskIntoConstraints="NO" id="uwR-rh-Q6k">
+                                <rect key="frame" x="149" y="419" width="74" height="122"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="s8e-dZ-Mzr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5kQ-Di-ohz"/>
+                            <constraint firstItem="uwR-rh-Q6k" firstAttribute="top" secondItem="s8e-dZ-Mzr" secondAttribute="bottom" constant="102" id="ATz-TS-J5X"/>
                             <constraint firstItem="x5h-sq-0bi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-231.5" id="JoC-fI-OZ4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uwR-rh-Q6k" secondAttribute="trailing" constant="136" id="TZW-Tb-ifQ"/>
                             <constraint firstItem="x5h-sq-0bi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YuK-ow-xYr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lTE-za-uEE" secondAttribute="trailing" constant="123" id="fmC-sN-pY1"/>
                             <constraint firstItem="lTE-za-uEE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="123" id="gcZ-t9-RBp"/>
                             <constraint firstItem="s8e-dZ-Mzr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-40" id="opy-BW-UOc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uwR-rh-Q6k" secondAttribute="bottom" constant="126" id="p62-lc-dDD"/>
+                            <constraint firstItem="uwR-rh-Q6k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="133" id="tJb-pE-wct"/>
                             <constraint firstItem="s8e-dZ-Mzr" firstAttribute="top" secondItem="lTE-za-uEE" secondAttribute="bottom" constant="8" id="ydB-2l-AcY"/>
                         </constraints>
                     </view>
@@ -352,6 +359,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Rhymestashlogo" width="103" height="182"/>
         <image name="blueFade" width="652" height="652"/>
     </resources>
     <inferredMetricsTieBreakers>
